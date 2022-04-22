@@ -20,11 +20,7 @@
 
 # Usage
 
-###
-
-# License
-
-### MIT
+### Link to video walkthrough: https://drive.google.com/file/d/1zCY8o4wso82UZ8FMhOm1RyL8He0zmAiF/view
 
 # Credits
 

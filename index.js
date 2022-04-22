@@ -26,7 +26,7 @@ const questions = [
         name: "usage",
     },
     {
-        message: "Are there any other contributors on the project?",
+        message: "Who are the contributors on the project?",
         type: "input",
         name: "credits",
     },
@@ -37,7 +37,7 @@ const questions = [
         choices: ["MIT", "BSD 3-clause", "Apache 2.0", "GNU GPL v2", "None"]
     },
     {
-        message: "Would you like to write tests for your application?",
+        message: "Would you like to write any tests?",
         type: "input",
         name: "tests",
     },
