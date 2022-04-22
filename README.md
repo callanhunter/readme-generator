@@ -10,7 +10,7 @@
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [Languages Used](#languages-used)
 - [Credits](#credits)
 - [Questions](#questions)
 
@@ -21,6 +21,10 @@
 # Usage
 
 ### Link to video walkthrough: https://drive.google.com/file/d/1zCY8o4wso82UZ8FMhOm1RyL8He0zmAiF/view
+
+# Languages Used
+
+### Node.js
 
 # Credits
 
