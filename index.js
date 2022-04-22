@@ -16,45 +16,40 @@ const questions = [
         name: "description",
     },
     {
-        message: "What instillation is required for users to use your application?",
+        message: "What installation is required for users to use your application?",
         type: "input",
-        name: "instillation",
+        name: "installation",
+    },
+    {
+        message: "Provide instructions for your application",
+        type: "input",
+        name: "usage",
+    },
+    {
+        message: "Are there any other contributors on the project?",
+        type: "input",
+        name: "credits",
     },
     {
         message: "What is the license for this project?",
         type: "list",
         name: "license",
-        choices: []
+        choices: ["MIT", "BSD 3-clause", "Apache", "GPLv2"]
     },
     {
-        message: "Are there any other contributors on the project?",
-        type: "input",
-        name: "contributors",
-    },
-    {
-        message: "table of contents",
-        type: "input",
-        name: "table of contents",
-    },
-    {
-        message: "usage?",
-        type: "input",
-        name: "usage",
-    },
-    {
-        message: "tests?",
+        message: "Would you like to write tests for your application?",
         type: "input",
         name: "tests",
     },
     {
         message: "What is your Github username?",
         type: "input",
-        name: "questions",
+        name: "github",
     },
     {
-        message: "What is your Email Address?",
+        message: "What is Email Address?",
         type: "input",
-        name: "questions",
+        name: "email",
     },
 
 ] 
@@ -69,7 +64,12 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    writeToFile();
+    inquirer.prompt(questions)
+    .then(function(answer) {
+        console.log(answer);
+    var userAnswer = generateMarkdown(answer);
+    writeToFile(userAnswer)
+    })
 }
 
 // Function call to initialize app
