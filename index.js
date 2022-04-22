@@ -34,7 +34,7 @@ const questions = [
         message: "What is the license for this project?",
         type: "list",
         name: "license",
-        choices: ["MIT", "BSD 3-clause", "Apache", "GPLv2"]
+        choices: ["MIT", "BSD 3-clause", "Apache 2.0", "GNU GPL v2", "None"]
     },
     {
         message: "Would you like to write tests for your application?",
@@ -54,23 +54,27 @@ const questions = [
 
 ] 
 
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
-        err ? console.log(err) : console.log("Your README has been generated!")
-    )
-};
+    fs.writeFile(fileName, data, function(err) {
+        console.log(fileName)
+        console.log(data)
+        if (err) {
+            return console.log(err)
+        } else {
+            console.log("success!!")
+        }
+    })
+}   
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then(function(answer) {
-        console.log(answer);
-    var userAnswer = generateMarkdown(answer);
-    writeToFile(userAnswer)
-    })
+        .then(function(data) {
+            writeToFile("newREADME.md", generateMarkdown(data));
+            console.log(data)
+        })
 }
 
 // Function call to initialize app
-init();
+init()
