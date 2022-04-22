@@ -3,13 +3,13 @@
 function renderLicenseBadge(license) {
   let badge = "";
   if(license === "MIT") {
-    badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    badge = "(https://img.shields.io/badge/License-MIT-yellow.svg)"
   } else if (license === "BSD 3-clause") {
-    badge = "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)"
+    badge = "(https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)"
   } else if (license === "Apache 2.0") {
-    badge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    badge = "(https://img.shields.io/badge/License-Apache_2.0-blue.svg)"
   } else if (license === "GNU GPL v2") {
-    badge = "[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)"
+    badge = "(https://img.shields.io/badge/License-GPL_v2-blue.svg)"
   } else {
     badge = ""
   }
@@ -71,15 +71,12 @@ function generateMarkdown(data) {
   # Credits
   ${data.credits}
 
-  # License
-  ${data.license}
-
   # Tests
   ${data.tests}
 
   # Questions
-  Github: [${data.github}][https://github.com/]
-  Email: [${data.email}]
+  Github: ${data.github}
+  Email: ${data.email}
 `;
 }
 
